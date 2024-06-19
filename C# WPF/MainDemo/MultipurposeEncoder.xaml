@@ -1,0 +1,44 @@
+﻿<Grid x:Class="MainDemoWPF.MultipurposeEncoder"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Height="290" Width="1053" Margin="-2,-2,1.8,1.6">
+        <GroupBox Margin="0,47,-181,178" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+        <GroupBox Margin="0,-15,-181,241" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+        <Label Content="Extra parameters:" HorizontalAlignment="Left" Margin="775,60,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxExtraParameters" HorizontalAlignment="Left" Height="129" Margin="775,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" TextChanged="tbxExtraParameters_TextChanged"/>
+        <Label Content="Video:" HorizontalAlignment="Left" Margin="192,3,0,0" VerticalAlignment="Top"/>
+        <Label Content="Audio:" HorizontalAlignment="Left" Margin="694,4,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="edtDatasteadEncoder_CodecName" HorizontalAlignment="Left" Height="20" Margin="248,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" TextChanged="edtDatasteadEncoder_CodecName_TextChanged"/>
+        <TextBox x:Name="edtDatasteadEncoder_Video_Bitrate_kb" HorizontalAlignment="Left" Height="20" Margin="248,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" TextChanged="edtDatasteadEncoder_Video_Bitrate_kb_TextChanged"/>
+        <TextBox x:Name="edtDatasteadEncoder_Video_IDRInterval" HorizontalAlignment="Left" Height="20" Margin="248,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" TextChanged="edtDatasteadEncoder_Video_IDRInterval_TextChanged"/>
+        <TextBox x:Name="edtDatasteadEncoder_Video_MaxBframes" HorizontalAlignment="Left" Height="20" Margin="248,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" TextChanged="edtDatasteadEncoder_Video_MaxBframes_TextChanged"/>
+        <TextBox x:Name="edtDatasteadEncoder_Video_ThreadCount" HorizontalAlignment="Left" Height="20" Margin="248,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" TextChanged="edtDatasteadEncoder_Video_ThreadCount_TextChanged"/>
+        <Label Content="Rate control (kbps):" HorizontalAlignment="Left" Margin="627,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.307"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.3"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="edtDatasteadEncoder_Audio_SamplesPerSecond" HorizontalAlignment="Left" Height="20" Margin="743,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="edtDatasteadEncoder_Audio_SamplesPerSecond_TextChanged"/>
+        <Label Content="Codec name, e.g. &quot;h264&quot;, &quot;hevc&quot;, &quot;mpeg4&quot; or empty for default" HorizontalAlignment="Left" Margin="322,3,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="edtDatasteadEncoder_Audio_BitRate_kb" HorizontalAlignment="Left" Height="20" Margin="743,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="edtDatasteadEncoder_Audio_BitRate_kb_TextChanged"/>
+        <Label Content="Bit rate (kbps)" HorizontalAlignment="Left" Margin="322,29,0,0" VerticalAlignment="Top"/>
+        <Label Content="IDR Interval (GOP), e.g. 30" HorizontalAlignment="Left" Margin="322,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Max B-frames, 0 by default" HorizontalAlignment="Left" Margin="322,86,0,0" VerticalAlignment="Top"/>
+        <Label Content="Thread count, 1 by default (4 by default for h264)" HorizontalAlignment="Left" Margin="322,113,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="edtDatasteadEncoder_Video_rc_MinBitrate_kb" HorizontalAlignment="Left" Height="20" Margin="617,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="edtDatasteadEncoder_Video_rc_MinBitrate_kb_TextChanged"/>
+        <TextBox x:Name="edtDatasteadEncoder_Video_rc_MaxBitrate_kb" HorizontalAlignment="Left" Height="20" Margin="617,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="edtDatasteadEncoder_Video_rc_MaxBitrate_kb_TextChanged"/>
+        <TextBox x:Name="edtDatasteadEncoder_Video_rc_BufferSize_kb" HorizontalAlignment="Left" Height="20" Margin="617,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="edtDatasteadEncoder_Video_rc_BufferSize_kb_TextChanged"/>
+        <Label Content="min bit rate" HorizontalAlignment="Left" Margin="692,144,0,0" VerticalAlignment="Top"/>
+        <Label Content="max bit rate" HorizontalAlignment="Left" Margin="692,170,0,0" VerticalAlignment="Top"/>
+        <Label Content="buffer size" HorizontalAlignment="Left" Margin="692,196,0,0" VerticalAlignment="Top"/>
+        <Label Content="samples per sec (44100, 22050...)" HorizontalAlignment="Left" Margin="827,4,0,0" VerticalAlignment="Top"/>
+        <Label Content="Bit rate (kbps) e.g. 64, 128" HorizontalAlignment="Left" Margin="827,43,0,0" VerticalAlignment="Top"/>
+    </Grid>
+    <TextBox x:Name="tbxDatasteadEncoderInfo" HorizontalAlignment="Left" Height="290" Margin="0,0,0,-0.4" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FFE5E5E5"/>
+</Grid>

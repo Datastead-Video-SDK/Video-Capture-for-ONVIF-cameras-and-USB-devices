@@ -1,0 +1,126 @@
+﻿<Grid x:Class="MainDemoWPF.Overlays"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="270" Width="1160">
+    <Grid Margin="17,31,204,18">
+        <CheckBox Name="chkAdjustOverlayAspectRatio" Height="20" Width="216" TabIndex="40" Foreground="#0000C0" Margin="702,-7,21,208" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkAdjustOverlayAspectRatio_CheckedChanged" Unchecked="chkAdjustOverlayAspectRatio_CheckedChanged" >adjust overlay aspect ratio</CheckBox>
+        <CheckBox Name="chkTargetAtMouseLocation" Height="19" Width="182" TabIndex="52" Margin="920,-6,-163,208" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkTargetAtMouseLocation_CheckedChanged" Unchecked="chkTargetAtMouseLocation_CheckedChanged" >target at mouse location</CheckBox>
+        <Button Name="btnPIP" Height="25" Width="273" TabIndex="51" Click="btnPIP_Click" Margin="838,20,-172,176" HorizontalAlignment="Right" VerticalAlignment="Bottom" >PIP from another TVideoGrabber control</Button>
+        <GroupBox Margin="702,3,85,166" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text=""/>
+            </GroupBox.Header>
+            <Canvas Height="28" Width="128" >
+                <Label Name="label6" Height="28" Width="48" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="47" Margin="1,3,890,190" HorizontalAlignment="Right" VerticalAlignment="Bottom" >grid:</Label>
+                <Button Name="btnDrawGridColor" Height="23" Width="19" TabIndex="46" Click="btnDrawGridColor_Click" Margin="30,0,890,198" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Button>
+                <Label Name="Label5" Height="26" Width="55" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="45" Margin="96,5,788,190" HorizontalAlignment="Right" VerticalAlignment="Bottom" >facets</Label>
+                <TextBox Name="edtDrawGrid" Height="22" Width="30" TabIndex="44" TextChanged="edtDrawGrid_TextChanged" Margin="48,1,861,198" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" >0</TextBox>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Margin="5,-15,492,22" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text="text overlays:"/>
+            </GroupBox.Header>
+            <Canvas Height="190" Width="418" >
+                <Button Name="btnTargetDisplayHelp" Height="24" Width="33" TabIndex="47" Foreground="#0000C0" Click="btnTargetDisplayHelp_Click" Margin="231,0,675,197" HorizontalAlignment="Right" VerticalAlignment="Bottom" >?</Button>
+                <TextBox Name="edtTextOverlayTargetDisplay" Height="23" Width="30" TabIndex="46" TextChanged="edtTextOverlayTargetDisplay_TextChanged" Margin="194,1,715,197" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" >-1</TextBox>
+                <Label Name="label8" Height="25" Width="120" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="45" Foreground="#0000C0" Margin="101,6,718,190" HorizontalAlignment="Right" VerticalAlignment="Bottom" >target display:</Label>
+                <CheckBox Name="chkTextOverlayTransparent" Height="18" Width="98" TabIndex="17" Margin="120,43,721,160" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkTextOverlayTransparent_CheckedChanged" Unchecked="chkTextOverlayTransparent_CheckedChanged" >transparent</CheckBox>
+                <CheckBox Name="chkHighResFont" Height="23" Width="172" TabIndex="44" Foreground="#0000C0" Margin="-3,23,770,175" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkHighResFont_CheckedChanged" Unchecked="chkHighResFont_CheckedChanged" >high resolution font</CheckBox>
+                <TextBox Name="mmoTextOverlayString" Height="81" Width="217" TabIndex="26" TextChanged="mmoTextOverlayString_TextChanged" Margin="-10,108,732,32" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" ></TextBox>
+                <GroupBox Margin="226,113,497,56" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+                    <GroupBox.Header>
+                        <TextBlock Text=""/>
+                    </GroupBox.Header>
+                    <Canvas Height="28" Width="192" Name="rdgTextOverlayAlign">
+                        <RadioButton Name="rdgTextOverlayAlignCenter" Height="20" Width="69" TabIndex="41" Margin="52,-1,818,202" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgTextOverlayAlign_CheckedChanged" >center</RadioButton>
+                        <RadioButton Name="rdgTextOverlayAlignLeft" Height="20" Width="48" TabIndex="42" Margin="-3,-1,894,202" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgTextOverlayAlign_CheckedChanged">left</RadioButton>
+                        <RadioButton Name="rdgTextOverlayAlignRight" Height="20" Width="57" TabIndex="40" Margin="127,-1,755,202" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgTextOverlayAlign_CheckedChanged">right</RadioButton>
+                    </Canvas>
+                </GroupBox>
+                <CheckBox Name="chkTextOverlayScrolling" Height="20" Width="82" TabIndex="39" Margin="222,163,635,38" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkTextOverlayScrolling_CheckedChanged" Unchecked="chkTextOverlayScrolling_CheckedChanged" >scrolling</CheckBox>
+                <Label Name="label7" Height="29" Width="126" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="38" Margin="269,163,544,29" HorizontalAlignment="Right" VerticalAlignment="Bottom" >-&gt; speed(+-)</Label>
+                <TextBox Name="edtTextOverlayScrollingSpeed" Height="23" Width="38" TabIndex="37" TextChanged="edtTextOverlayScrollingSpeed_TextChanged" Margin="376,162,525,36" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+                <TextBox Name="edtTextOverlayLeft" Height="23" Width="40" TabIndex="20" TextChanged="edtTextOverlayLeft_TextChanged" Margin="219,91,680,107" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" >5</TextBox>
+                <Button Name="btnSelectShadowColor" Height="24" Width="103" TabIndex="36" Click="btnSelectShadowColor_Click" Margin="313,39,523,158" HorizontalAlignment="Right" VerticalAlignment="Bottom" >shadow color</Button>
+                <GroupBox Margin="0,69,713,104" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+                    <GroupBox.Header>
+                        <TextBlock Text="text selector [0 - n]  0 = default"/>
+                    </GroupBox.Header>
+                    <Canvas Height="24" Width="202" >
+                        <RadioButton Name="TextSelector4" Height="19" Width="29" TabIndex="4" Margin="160,1,750,201" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="TextSelector_CheckedChanged">4</RadioButton>
+                        <RadioButton Name="TextSelector3" Height="19" Width="29" TabIndex="3" Margin="122,1,788,201" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="TextSelector_CheckedChanged">3</RadioButton>
+                        <RadioButton Name="TextSelector2" Height="19" Width="28" TabIndex="2" Margin="84,1,827,201" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="TextSelector_CheckedChanged">2</RadioButton>
+                        <RadioButton Name="TextSelector1" Height="19" Width="29" TabIndex="1" Margin="45,1,865,201" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="TextSelector_CheckedChanged">1</RadioButton>
+                        <RadioButton Name="TextSelector0" Height="19" Width="29" TabIndex="0" Margin="7,1,903,201" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="TextSelector_CheckedChanged">0</RadioButton>
+                    </Canvas>
+                </GroupBox>
+                <CheckBox Name="chkTextOverlayEnabled" Height="18" Width="87" TabIndex="25" Foreground="#0000C0" Margin="-3,6,855,197" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkTextOverlayEnabled_CheckedChanged" Unchecked="chkTextOverlayEnabled_CheckedChanged" >enabled</CheckBox>
+                <CheckBox Name="chkTextOverlayShadow" Height="17" Width="81" TabIndex="31" Margin="225,44,633,160" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkTextOverlayShadow_CheckedChanged" Unchecked="chkTextOverlayShadow_CheckedChanged" >shadow</CheckBox>
+                <Button Name="btnBackColor" Height="24" Width="61" TabIndex="33" Click="btnBackColor_Click" Margin="349,8,529,189" HorizontalAlignment="Right" VerticalAlignment="Bottom" >bkgnd</Button>
+                <TextBox Name="edtTextOverlayTop" Height="23" Width="39" TabIndex="19" TextChanged="edtTextOverlayTop_TextChanged" Margin="306,92,594,106" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" >5</TextBox>
+                <Button Name="btnSelectFontColor" Height="24" Width="61" TabIndex="32" Click="btnSelectFontColor_Click" Margin="284,8,594,189" HorizontalAlignment="Right" VerticalAlignment="Bottom" >color</Button>
+                <TextBox Name="edtTextOverlayRight" Height="23" Width="40" TabIndex="18" TextChanged="edtTextOverlayRight_TextChanged" Margin="262,91,637,107" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" >-1</TextBox>
+                <Label Name="Label43" Height="25" Width="132" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="29" Margin="229,74,578,122" HorizontalAlignment="Right" VerticalAlignment="Bottom" >left      right      top</Label>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Margin="445,-15,234,170" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text="free hand mouse overlay USING DC"/>
+            </GroupBox.Header>
+            <Canvas Height="42" Width="236" >
+                <CheckBox Name="chkFreeHandEnabled" Height="20" Width="78" TabIndex="15" Foreground="#0000C0" Margin="9,8,852,193" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkFreeHandEnabled_CheckedChanged" Unchecked="chkFreeHandEnabled_CheckedChanged" >enabled</CheckBox>
+                <Button Name="btnFreeHandErase" Height="25" Width="118" TabIndex="14" Click="btnFreeHandErase_Click" Margin="112,5,709,191" HorizontalAlignment="Right" VerticalAlignment="Bottom" >erase drawing</Button>
+                <Button Name="btnFreeHandColor" Height="25" Width="19" TabIndex="16" Click="btnFreeHandColor_Click" Margin="93,5,827,191" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Button>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Margin="445,39,-162,22" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text="image overlay"/>
+            </GroupBox.Header>
+            <Canvas Height="136" Width="632" >
+                <Button Name="btn2TargetDisplayHelp" Height="24" Width="32" TabIndex="50" Foreground="#0000C0" Click="btn2TargetDisplayHelp_Click" Margin="534,105,373,92" HorizontalAlignment="Right" VerticalAlignment="Bottom" >?</Button>
+                <TextBox Name="edtImageOverlayTargetDisplay" Height="23" Width="30" TabIndex="49" TextChanged="edtImageOverlayTargetDisplay_TextChanged" Margin="496,106,413,92" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" >-1</TextBox>
+                <Label Name="label9" Height="25" Width="120" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="48" Foreground="#0000C0" Margin="403,111,416,85" HorizontalAlignment="Right" VerticalAlignment="Bottom" >target display:</Label>
+                <Label Name="Label4" Height="25" Width="163" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="46" Margin="400,60,376,136" HorizontalAlignment="Right" VerticalAlignment="Bottom" >chroma key RGB color:</Label>
+                <Label Name="Label3" Height="27" Width="147" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="45" Margin="400,81,392,113" HorizontalAlignment="Right" VerticalAlignment="Bottom" >chroma key leeway:</Label>
+                <TextBox Name="edtImageOverlayChromaKeyColorValue" Height="23" Width="67" TabIndex="41" TextChanged="edtImageOverlayChromaKeyColorValue_TextChanged" Margin="542,55,330,143" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" >0</TextBox>
+                <CheckBox Name="chkImageOverlayChromaKey" Height="21" Width="141" TabIndex="39" Margin="393,38,405,162" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkImageOverlayChromaKey_CheckedChanged" Unchecked="chkImageOverlayChromaKey_CheckedChanged" >chroma key</CheckBox>
+                <Button Name="btnImageOverlayPickupTransparentColorHelp" Height="24" Width="33" TabIndex="37" Click="btnImageOverlayPickupTransparentColorHelp_Click" Margin="321,103,585,94" HorizontalAlignment="Right" VerticalAlignment="Bottom" >?</Button>
+                <Button Name="btnImageOverlayPickupTransparentColor" Height="24" Width="185" TabIndex="36" Click="btnImageOverlayPickupTransparentColor_Click" Margin="129,103,625,94" HorizontalAlignment="Right" VerticalAlignment="Bottom" >pick up transparent color</Button>
+                <GroupBox Margin="234,-2,292,175" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+                    <GroupBox.Header>
+                        <TextBlock Text="image selector [0..9] 0 = default"/>
+                    </GroupBox.Header>
+                    <Canvas Height="24" Width="389" >
+                        <RadioButton Name="ImageSelector9" Height="19" Width="29" TabIndex="9" Margin="352,2,558,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">9</RadioButton>
+                        <RadioButton Name="ImageSelector8" Height="19" Width="29" TabIndex="8" Margin="314,2,596,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">8</RadioButton>
+                        <RadioButton Name="ImageSelector7" Height="19" Width="28" TabIndex="7" Margin="276,2,635,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">7</RadioButton>
+                        <RadioButton Name="ImageSelector6" Height="19" Width="29" TabIndex="6" Margin="237,2,673,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">6</RadioButton>
+                        <RadioButton Name="ImageSelector5" Height="19" Width="29" TabIndex="5" Margin="199,2,711,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">5</RadioButton>
+                        <RadioButton Name="ImageSelector4" Height="19" Width="29" TabIndex="4" Margin="163,2,747,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">4</RadioButton>
+                        <RadioButton Name="ImageSelector3" Height="19" Width="29" TabIndex="3" Margin="124,2,786,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">3</RadioButton>
+                        <RadioButton Name="ImageSelector2" Height="19" Width="29" TabIndex="2" Margin="86,2,824,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">2</RadioButton>
+                        <RadioButton Name="ImageSelector1" Height="19" Width="28" TabIndex="1" Margin="48,2,863,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">1</RadioButton>
+                        <RadioButton Name="ImageSelector0" Height="19" Width="29" TabIndex="0" Margin="9,2,901,200" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="ImageSelector_CheckedChanged">0</RadioButton>
+                    </Canvas>
+                </GroupBox>
+                <TextBox Name="edtImageOverlayWidth" Height="23" Width="39" TabIndex="19" TextChanged="edtImageOverlayWidth_TextChanged" Margin="13,95,887,103" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" >-1</TextBox>
+                <TextBox Name="edtImageOverlayHeight" Height="23" Width="40" TabIndex="18" TextChanged="edtImageOverlayHeight_TextChanged" Margin="63,95,836,103" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" >-1</TextBox>
+                <Label Name="Label1" Height="25" Width="49" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="21" Margin="22,80,868,116" HorizontalAlignment="Right" VerticalAlignment="Bottom" >width</Label>
+                <Label Name="Label2" Height="25" Width="56" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="20" Margin="70,80,813,116" HorizontalAlignment="Right" VerticalAlignment="Bottom" >height</Label>
+                <TextBox Name="edtImageOverlayTransparentColorValue" Height="23" Width="68" TabIndex="17" TextChanged="edtImageOverlayTransparentColorValue_TextChanged" Margin="286,55,585,143" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" >0</TextBox>
+                <Button Name="btnImageOverlayFromFile" Height="28" Width="109" TabIndex="16" Click="btnImageOverlayFromFile_Click" Margin="105,2,725,191" HorizontalAlignment="Right" VerticalAlignment="Bottom" >load image...</Button>
+                <CheckBox Name="chkImageOverlayAlphaBlend" Height="21" Width="127" TabIndex="14" Margin="129,77,683,123" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkImageOverlayAlphaBlend_CheckedChanged" Unchecked="chkImageOverlayAlphaBlend_CheckedChanged" >alpha blending:</CheckBox>
+                <CheckBox Name="chkImageOverlayUseTransparentColor" Height="20" Width="167" TabIndex="12" Margin="129,58,643,143" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkImageOverlayUseTransparentColor_CheckedChanged" Unchecked="chkImageOverlayUseTransparentColor_CheckedChanged" >use transparent color:</CheckBox>
+                <CheckBox Name="chkImageOverlayEnabled" Height="20" Width="84" TabIndex="6" Foreground="#0000C0" Margin="9,3,846,198" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkImageOverlayEnabled_CheckedChanged" Unchecked="chkImageOverlayEnabled_CheckedChanged" >enabled</CheckBox>
+                <CheckBox Name="chkImageOverlayTransparent" Height="21" Width="157" TabIndex="5" Margin="129,38,653,162" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkImageOverlayTransparent_CheckedChanged" Unchecked="chkImageOverlayTransparent_CheckedChanged" >transparent</CheckBox>
+                <TextBox Name="edtImageOverlayLeft" Height="23" Width="39" TabIndex="4" TextChanged="edtImageOverlayLeft_TextChanged" Margin="13,53,887,145" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" >10</TextBox>
+                <TextBox Name="edtImageOverlayTop" Height="23" Width="40" TabIndex="3" TextChanged="edtImageOverlayTop_TextChanged" Margin="63,53,836,145" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" >10</TextBox>
+                <Label Name="Label48" Height="25" Width="36" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="10" Margin="22,38,881,158" HorizontalAlignment="Right" VerticalAlignment="Bottom" >left</Label>
+                <Label Name="Label49" Height="25" Width="37" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="9" Margin="70,38,832,158" HorizontalAlignment="Right" VerticalAlignment="Bottom" >top</Label>
+                <Slider Canvas.Left="232" Canvas.Top="84" Height="12" Name="tbrImageOverlayAlphaBlending" Width="153" Maximum="255" ValueChanged="tbrImageOverlayAlphaBlending_ValueChanged" />
+                <Slider Canvas.Left="508" Canvas.Top="88" Height="12" Maximum="100" Name="tbrChromaKeyLeeway" Width="113" ValueChanged="tbrChromaKeyLeeway_ValueChanged" />
+            </Canvas>
+        </GroupBox>
+    </Grid>
+</Grid>

@@ -1,0 +1,88 @@
+﻿<Grid x:Class="MainDemoWPF.Display" 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Height="547.395" Width="1496.935">
+    <Grid Margin="10,0,369.935,289.395">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="395*"/>
+            <ColumnDefinition Width="718*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Margin="0,0,469.2,204.805" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1" >
+            <GroupBox.Header>
+                <TextBlock Text="display # selected:"/>
+            </GroupBox.Header>
+            <Grid>
+                <Canvas Height="29" Width="172" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,-1.8" >
+                    <RadioButton Name="rdgSelectDisplay3" Height="21" Width="37" TabIndex="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Canvas.Left="133" Canvas.Top="3" Checked="rdgSelectDisplay_CheckedChanged" >3</RadioButton>
+                    <RadioButton Name="rdgSelectDisplay2" Height="21" Width="37" TabIndex="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Canvas.Left="96" Canvas.Top="3" Checked="rdgSelectDisplay_CheckedChanged" >2</RadioButton>
+                    <RadioButton Name="rdgSelectDisplay1" Height="21" Width="37" TabIndex="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Canvas.Left="59" Canvas.Top="3" Checked="rdgSelectDisplay_CheckedChanged">1</RadioButton>
+                    <RadioButton Name="rdgSelectDisplay0" Height="21" Width="37" TabIndex="0" Margin="22,3,1068,193" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgSelectDisplay_CheckedChanged">0</RadioButton>
+                </Canvas>
+            </Grid>
+        </GroupBox>
+        <CheckBox Name="chkDisplayActive" Height="21" Width="122" TabIndex="55" Margin="0,0,668.2,219.805" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkDisplayActive_CheckedChanged" Unchecked="chkDisplayActive_CheckedChanged" Grid.ColumnSpan="2" >DISPLAY ACTIVE -&gt;</CheckBox>
+        <CheckBox Name="chkBlackMagicOutput" Height="21" Width="181" TabIndex="54" Margin="143,0,0,225.805" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkBlackMagicOutput_CheckedChanged" Unchecked="chkBlackMagicOutput_CheckedChanged" >BlackMagic Decklink output</CheckBox>
+        <CheckBox Name="chkAdjustPixelAspectRatio" Height="20" Width="181" TabIndex="53" Margin="143,0,0,189.805" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkAdjustPixelAspectRatio_CheckedChanged" Unchecked="chkAdjustPixelAspectRatio_CheckedChanged" >adjust pixel aspect ratio</CheckBox>
+        <CheckBox Name="chkVideoVisibleWhenStopped" Height="21" Width="199" TabIndex="52" Margin="143,0,0,206.805" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkVideoVisibleWhenStopped_CheckedChanged" Unchecked="chkVideoVisibleWhenStopped_CheckedChanged" >video visible when stopped</CheckBox>
+        <GroupBox x:Name="rdgVideoRenderer" Margin="0,0,259.6,43.805" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="137" >
+            <GroupBox.Header>
+                <TextBlock Text="video renderer"/>
+            </GroupBox.Header>
+            <Canvas x:Name="cnvVideoRenderer" Height="192" Margin="0,0,-2.2,0" >
+                <RadioButton Name="rdgVideoRendererAutoSelect" Height="20" Width="96" TabIndex="0" Margin="-3,15,1034,182" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgVideoRenderer_CheckedChanged">auto</RadioButton>
+                <RadioButton Name="rdgVideoRendererMadVR" Height="20" Width="75" TabIndex="8" HorizontalAlignment="Right" VerticalAlignment="Bottom" Canvas.Left="66" Canvas.Top="42" Checked="rdgVideoRenderer_CheckedChanged" >madVR</RadioButton>
+                <RadioButton Name="rdgVideoRendererEVR" Height="19" Width="78" TabIndex="1" Margin="-3,39,1052,159" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgVideoRenderer_CheckedChanged" >EVR</RadioButton>
+                <RadioButton Name="rdgVideoRendererVMR9" Height="19" Width="78" TabIndex="2" Margin="-3,62,1052,136" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgVideoRenderer_CheckedChanged">VMR9</RadioButton>
+                <RadioButton Name="rdgVideoRendererVMR7" Height="19" Width="78" TabIndex="3" Margin="-3,85,1052,113" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgVideoRenderer_CheckedChanged" >VMR7</RadioButton>
+                <RadioButton Name="rdgVideoRendererStandard" Height="19" Width="87" TabIndex="4" Margin="-3,110,1043,88" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgVideoRenderer_CheckedChanged">standard</RadioButton>
+                <RadioButton Name="rdgVideoRendererOverlay" Height="19" Width="76" TabIndex="5" Margin="-4,135,1055,63" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgVideoRenderer_CheckedChanged">overlay</RadioButton>
+                <RadioButton Name="rdgVideoRendererRecPriority" Height="20" Width="164" TabIndex="6" Margin="-4,158,967,39" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgVideoRenderer_CheckedChanged">recording priority</RadioButton>
+                <RadioButton Name="rdgVideoRendererNone" Height="18" Width="75" TabIndex="7" HorizontalAlignment="Right" VerticalAlignment="Bottom" Canvas.Left="66" Canvas.Top="19" Checked="rdgVideoRenderer_CheckedChanged">none</RadioButton>
+            </Canvas>
+        </GroupBox>
+        <CheckBox Name="chkTransparency" Height="20" Width="115" TabIndex="50" Margin="143,0,0,134.805" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkTransparency_CheckedChanged" Unchecked="chkTransparency_CheckedChanged" >transparency</CheckBox>
+        <GroupBox Name="grbMainVideoWindow" Margin="340,0,159.2,36.805" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="625" Height="169" Grid.ColumnSpan="2" >
+            <GroupBox.Header>
+                <TextBlock Text="display settings:"/>
+            </GroupBox.Header>
+            <Canvas Margin="20,0,5,-1.8" >
+                <CheckBox Name="chkTransparentColor" Height="20" Width="176" TabIndex="34" Margin="319,63,632,134" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkTransparentColor_CheckedChanged" Unchecked="chkTransparentColor_CheckedChanged" >transparent RGB color:</CheckBox>
+                <TextBox Name="txtTransparentColor" Height="23" Width="74" TabIndex="33" TextChanged="txtTransparentColor_TextChanged" Margin="494,62,559,132" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+                <CheckBox Name="chkAlphablend" Height="20" Width="177" TabIndex="32" Margin="128,50,822,147" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkAlphablend_CheckedChanged" Unchecked="chkAlphablend_CheckedChanged" >alphablending: (0..255)</CheckBox>
+                <Label Name="lblMonitorNumber" Height="25" Width="181" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="30" Margin="371,36,575,156" HorizontalAlignment="Right" VerticalAlignment="Bottom" >assign to monitor number:</Label>
+                <TextBox Name="txtDisplayMonitor" Height="23" Width="45" TabIndex="29" TextChanged="txtDisplayMonitor_TextChanged" Margin="525,32,557,162" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+                <Button Name="btnTestPanScan" Height="24" Width="98" TabIndex="27" Click="btnTestPanScan_Click" Margin="300,91,729,102" HorizontalAlignment="Right" VerticalAlignment="Bottom" >test pan-scan</Button>
+                <Button Name="btnTestPanScanHelp" Height="24" Width="22" TabIndex="28" Click="btnTestPanScanHelp_Click" Margin="297,118,808,75" HorizontalAlignment="Right" VerticalAlignment="Bottom" >?</Button>
+                <Label Name="Label1" Height="25" Width="130" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="25" Margin="134,99,863,93" HorizontalAlignment="Right" VerticalAlignment="Bottom" >pan-scan (0..100)</Label>
+                <CheckBox Name="chkFullScreen" Height="19" Width="96" TabIndex="19" Margin="188,20,843,178" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkFullScreen_CheckedChanged" Unchecked="chkFullScreen_CheckedChanged" >full screen</CheckBox>
+                <CheckBox Name="chkUseVideoPort" Height="20" Width="114" TabIndex="21" Margin="456,1,557,196" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkUseVideoPort_CheckedChanged" Unchecked="chkUseVideoPort_CheckedChanged" >use video port</CheckBox>
+                <CheckBox Name="chkVisible" Height="20" Width="84" TabIndex="24" Margin="0,1,1043,196" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkVisible_CheckedChanged" Unchecked="chkVisible_CheckedChanged" >visible</CheckBox>
+                <GroupBox x:Name="rdgAspectRatio" Margin="10,47,997,65" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+                    <GroupBox.Header>
+                        <TextBlock Text="aspect ratio"/>
+                    </GroupBox.Header>
+                    <Canvas x:Name="cnvAspectRatio" Height="81" Width="96" >
+                        <RadioButton Name="rdgDisplayAspectRatioPanScan" Height="20" Width="88" TabIndex="3" Margin="0,57,1039,140" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgDisplayAspectRatioPanScan_Checked" >pan-scan</RadioButton>
+                        <RadioButton Name="rdgDisplayAspectRatioStretch" Height="20" Width="72" TabIndex="2" Margin="0,38,1055,159" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgDisplayAspectRatioStretch_Checked" >stretch</RadioButton>
+                        <RadioButton Name="rdgDisplayAspectRatioPan" Height="20" Width="86" TabIndex="1" Margin="0,20,1041,177" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgDisplayAspectRatioPan_Checked" >no resize</RadioButton>
+                        <RadioButton Name="rdgDisplayAspectRatioBox" Height="19" Width="51" TabIndex="0" Margin="0,1,1076,197" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="rdgDisplayAspectRatioBox_Checked" >box</RadioButton>
+                    </Canvas>
+                </GroupBox>
+                <CheckBox Name="chkEmbedded" Height="23" Width="127" TabIndex="22" Margin="0,20,1000,174" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkEmbedded_CheckedChanged" Unchecked="chkEmbedded_CheckedChanged" >embedded</CheckBox>
+                <CheckBox Name="chkMouseMovesWindow" Height="20" Width="163" TabIndex="18" Margin="188,1,776,196" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkMouseMovesWindow_CheckedChanged" Unchecked="chkMouseMovesWindow_CheckedChanged" >mouse moves window</CheckBox>
+                <CheckBox Name="chkStayOnTop" Height="20" Width="106" TabIndex="17" Margin="358,1,663,196" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkStayOnTop_CheckedChanged" Unchecked="chkStayOnTop_CheckedChanged" >stay on top</CheckBox>
+                <CheckBox Name="chkAutoSize" Height="20" Width="96" TabIndex="16" Margin="85,1,946,196" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkAutoSize_CheckedChanged" Unchecked="chkAutoSize_CheckedChanged" >autosize</CheckBox>
+                <Button Name="btnNewLocation" Height="24" Width="168" TabIndex="12" Click="btnNewLocation_Click" Margin="409,118,550,75" HorizontalAlignment="Right" VerticalAlignment="Bottom" >location 10,10 (autosize)</Button>
+                <Button Name="btnNewLocation2" Height="24" Width="168" TabIndex="11" Click="btnNewLocation2_Click" Margin="409,91,550,102" HorizontalAlignment="Right" VerticalAlignment="Bottom" >location 20,20 (480,200)</Button>
+                <Slider x:Name="tbrAlphablend" Height="24" Canvas.Left="128" Canvas.Top="70" Width="156" Maximum="255" Cursor="None" ValueChanged="tbrAlphablend_ValueChanged"/>
+                <Slider x:Name="tbrPanScan" Height="25" Canvas.Left="128" Canvas.Top="124" Width="156" Maximum="100" ValueChanged="tbrPanScan_ValueChanged"/>
+            </Canvas>
+        </GroupBox>
+        <CheckBox Name="chkSetLogo" Height="19" Width="162" TabIndex="44" Margin="143,0,0,101.805" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkSetLogo_CheckedChanged" Unchecked="chkSetLogo_CheckedChanged" >show logo, e.g.:</CheckBox>
+        <CheckBox Name="chkBorder" Height="20" Width="115" TabIndex="43" Margin="143,0,0,152.805" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkBorder_CheckedChanged" Unchecked="chkBorder_CheckedChanged" >border</CheckBox>
+        <CheckBox Name="chkChangeCursor" Height="20" Width="192" TabIndex="42" Margin="143,0,0,171.805" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkChangeCursor_CheckedChanged" Unchecked="chkChangeCursor_CheckedChanged" >change cursor (e.g.: cross)</CheckBox>
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="85" Margin="143,161,0,0" VerticalAlignment="Top" Width="101"/>
+    </Grid>
+</Grid>
+
+

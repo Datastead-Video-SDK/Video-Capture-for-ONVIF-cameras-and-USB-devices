@@ -1,0 +1,79 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:VidGrabWPF="clr-namespace:VidGrabWPF;assembly=VideoGrabberNET" mc:Ignorable="d" x:Class="MainDemoWPF.MainForm"
+	Title="Datastead Software - TVideoGrabber demo" d:DesignWidth="1256.593" d:DesignHeight="984.173" Activated="Window_Activated" >
+    <Grid Height="837" Width="1262">
+        <Label x:Name="label4" Height="26" Width="30" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="67" Margin="0,0,963,451" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Y:" />
+        <Label x:Name="label3" Height="40" Width="114" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="66" Margin="0,0,881,460" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="zoom center X:" />
+        <Label x:Name="label2" Height="40" Width="59" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="64" Margin="0,0,936,482" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="ZOOM:" />
+        <CheckBox x:Name="chkPlayerTrackBarSynchrone" Height="20" Width="160" TabIndex="62" Margin="0,0,48,492" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="chkPlayerTrackBarSynchrone_CheckedChanged" Unchecked="chkPlayerTrackBarSynchrone_CheckedChanged" Content="player trackbar synchrone" />
+        <Label x:Name="Label1" Height="25" Width="101" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="61" Margin="0,0,1151,505" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="storage path:" />
+        <GroupBox Margin="0,0,21,523" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="1241" >
+            <GroupBox.Header>
+                <TextBlock Text="player control"/>
+            </GroupBox.Header>
+            <Canvas Height="36" Margin="0,0,0.8,0" >
+                <Button x:Name="btnFrameStep" Height="20" Width="24" TabIndex="33" Click="btnFrameStep_Click" Canvas.Left="120" Canvas.Top="10" Content="&gt;." />
+                <Button x:Name="btnFastFwd" Height="20" Width="24" TabIndex="32" Click="btnFastFwd_Click" Canvas.Left="180" Canvas.Top="10" Content="&gt;&gt;" />
+                <Button x:Name="btnFastRew" Height="20" Width="24" TabIndex="31" Click="btnFastRew_Click" Canvas.Left="150" Canvas.Top="10" Content="&lt;&lt;" />
+                <Button x:Name="btnPlay" Height="20" Width="24" TabIndex="30" Click="btnPlay_Click" Canvas.Left="90" Canvas.Top="10" Content="&gt;" />
+                <Button x:Name="btnPause" Height="20" Width="24" TabIndex="28" Click="btnPause_Click" Canvas.Left="60" Canvas.Top="10" Content="||"  />
+                <Button x:Name="btnPlayBackwards" Height="20" Width="24" TabIndex="27" Click="btnPlayBackwards_Click"  Canvas.Left="0" Canvas.Top="10" Content="&lt;" />
+                <Button x:Name="btnStop" Height="20" Width="24" TabIndex="29" Click="btnStop_Click" Canvas.Left="30" Canvas.Top="10" Content="O"  />
+                <Slider x:Name="sldPlayer" Height="20" Canvas.Left="225" Canvas.Top="10" Width="993" ValueChanged="sldPlayer_ValueChanged" Maximum="1"/>
+            </Canvas>
+        </GroupBox>
+        <TabControl x:Name="tbcTabs" Height="248" Width="1252" TabStripPlacement= "Top" Margin="0,0,10,583" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <TabItem x:Name="tbpVideoSource" Header="video source" >
+                <Canvas x:Name="cantbpVideoSource" Height="219" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpIPCameras" Header="IP cameras" >
+                <Canvas x:Name="cantbpIPCameras" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpAudio" Header="audio" >
+                <Canvas x:Name="cantbpAudio" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpRecording" Header="recording" >
+                <Canvas x:Name="cantbpRecording" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpMultipurposeEncoder" Header="Multipurpose Encoder" >
+                <Canvas x:Name="cantbpMultipurposeEncoder" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpNetworkStreaming" Header="streaming" >
+                <Canvas x:Name="cantbpNetworkStreaming" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpPlayer" Header="player" >
+                <Canvas x:Name="cantbpPlayer" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpFrameGrabber" Header="frame grabber" >
+                <Canvas x:Name="cantbpFrameGrabber" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpMotionDetection" Header="motion detection" >
+                <Canvas x:Name="cantbpMotionDetection" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpOverlays" Header="overlays" >
+                <Canvas x:Name="cantbpOverlays" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpVideoProcessing" Header="video processing" >
+                <Canvas x:Name="cantbpVideoProcessing" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpDisplay" Header="display" >
+                <Canvas x:Name="cantbpDisplay" Height="213" Width="1244" />
+            </TabItem>
+            <TabItem x:Name="tbpReencoding" Header="reencoding" >
+                <Canvas x:Name="cantbpReencoding" Height="213" Width="1244" />
+            </TabItem>
+        </TabControl>
+        <TextBox x:Name="mmoLog" Height="376" Width="250" TabIndex="50" Margin="0,0,1012,52" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" />
+        <TextBox x:Name="edtAdditionalInfo" Height="23" Width="250" TabIndex="49" Margin="0,0,1012,434" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" />
+        <TextBox x:Name="edtFrameCount" Height="23" Width="250" TabIndex="48" Margin="0,0,1012,462" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" />
+        <TextBox x:Name="edtStoragePath" Height="23" Width="250" TabIndex="46" TextChanged="edtStoragePath_TextChanged" Margin="0,0,1012,489" HorizontalAlignment="Right" VerticalAlignment="Bottom" AcceptsReturn="True" TextWrapping="Wrap" />
+        <VidGrabWPF:VideoGrabberWPF x:Name="VideoGrabber1" HorizontalAlignment="Left" Height="403" Margin="308,391,0,0" VerticalAlignment="Top" Width="713" OnCopyPreallocDataStarted="VideoGrabber1_OnCopyPreallocDataStarted" OnVideoFromBitmapsNextFrameNeeded="VideoGrabber1_OnVideoFromBitmapsNextFrameNeeded" OnDeviceArrivalOrRemoval="VideoGrabber1_OnDeviceArrivalOrRemoval" SizeChanged="VideoGrabber1_SizeChanged" OnDVCommandCompleted="VideoGrabber1_OnDVCommandCompleted" OnPlayerUpdateTrackbarPosition="VideoGrabber1_OnPlayerUpdateTrackbarPosition" OnEnumerateWindows="VideoGrabber1_OnEnumerateWindows" OnReinitializing="VideoGrabber1_OnReinitializing" OnCopyPreallocDataProgress="VideoGrabber1_OnCopyPreallocDataProgress" OnResizeVideo="VideoGrabber1_OnResizeVideo" OnCopyPreallocDataCompleted="VideoGrabber1_OnCopyPreallocDataCompleted" OnFrameProgress2="VideoGrabber1_OnFrameProgress2" OnMouseMove="VideoGrabber1_OnMouseMove" OnRecordingStarted="VideoGrabber1_OnRecordingStarted" OnRecordingReadyToStart="VideoGrabber1_OnRecordingReadyToStart" OnRecordingCompleted="VideoGrabber1_OnRecordingCompleted" OnMouseUp="VideoGrabber1_OnMouseUp" OnMouseDown="VideoGrabber1_OnMouseDown" OnGraphBuilt="VideoGrabber1_OnGraphBuilt" OnDeviceLost="VideoGrabber1_OnDeviceLost" OnInactive="VideoGrabber1_OnInactive" OnReencodingStarted="VideoGrabber1_OnReencodingStarted" OnMotionNotDetected="VideoGrabber1_OnMotionNotDetected" OnReencodingProgress="VideoGrabber1_OnReencodingProgress" OnFrameBitmap="VideoGrabber1_OnFrameBitmap" OnPlayerOpened="VideoGrabber1_OnPlayerOpened" OnRecordingPaused="VideoGrabber1_OnRecordingPaused" OnPreviewStarted="VideoGrabber1_OnPreviewStarted" OnCreatePreallocFileProgress="VideoGrabber1_OnCreatePreallocFileProgress" OnDVDiscontinuity="VideoGrabber1_OnDVDiscontinuity" OnDirectNetworkStreamingHostUrl="VideoGrabber1_OnDirectNetworkStreamingHostUrl" OnClientConnection="VideoGrabber1_OnClientConnection" OnVideoDeviceSelected="VideoGrabber1_OnVideoDeviceSelected" OnReencodingCompleted="VideoGrabber1_OnReencodingCompleted" OnAudioDeviceSelected="VideoGrabber1_OnAudioDeviceSelected" OnPlayerEndOfStream="VideoGrabber1_OnPlayerEndOfStream" OnCreatePreallocFileStarted="VideoGrabber1_OnCreatePreallocFileStarted" OnMotionDetected="VideoGrabber1_OnMotionDetected" OnCreatePreallocFileCompleted="VideoGrabber1_OnCreatePreallocFileCompleted" OnLog="VideoGrabber1_OnLog" OnDiskFull="VideoGrabber1_OnDiskFull" OnFrameCaptureCompleted="VideoGrabber1_OnFrameCaptureCompleted"  />
+        <Slider x:Name="tbrZoom" HorizontalAlignment="Left" Height="18" Margin="326,314,0,0" VerticalAlignment="Top" Width="695" ValueChanged="tbrZoom_ValueChanged" Maximum="10000"/>
+        <Slider x:Name="tbrZoomX" HorizontalAlignment="Left" Height="18" Margin="360,337,0,0" VerticalAlignment="Top" Width="635" ValueChanged="tbrZoomX_ValueChanged"/>
+        <Slider x:Name="tbrZoomY" HorizontalAlignment="Left" Height="392" Margin="269,391,0,0" VerticalAlignment="Top" Width="16" Orientation="Vertical" ValueChanged="tbrZoomY_ValueChanged"/>
+    </Grid>
+</Window>
